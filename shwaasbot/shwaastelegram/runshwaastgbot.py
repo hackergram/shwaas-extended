@@ -14,12 +14,12 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
 
-from sai.saibot import *
+from shwaastg.shwaastgbot import *
 
 
 if __name__ == '__main__':
 	setup()
-	saibot.updater.start_polling()
-	xpal.saibotxpal.logger.info("Bot is trying to poll for new messages")
+	shwaastgbot.updater.start_polling()
+	xpal.shwaastgbotxpal.logger.info("Bot is trying to poll for new messages")
 
-	saibot.updater.idle()
+	shwaastgbot.updater.idle()

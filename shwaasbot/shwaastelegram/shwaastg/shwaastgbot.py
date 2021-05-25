@@ -2,7 +2,7 @@
 #
 # Simple Bot to reply to Telegram messages
 # This program is dedicated to the public domain under the CC0 license.
-# from saibot.xpal import *
+# from shwaastgbot.xpal import *
 from . import xpal
 from . import utils
 import requests, json
@@ -20,9 +20,9 @@ import os
 #sys.path.append("/opt/xetrapal")
 
 
-memberbotconfig = xetrapal.karma.load_config(configfile="/opt/saibot-appdata/saibot.conf")
-saibot = xetrapal.telegramastras.XetrapalTelegramBot(config=memberbotconfig, logger=xpal.saibotxpal.logger)
-logger = saibot.logger
+memberbotconfig = xetrapal.karma.load_config(configfile="/opt/shwaastgbot-appdata/shwaastgbot.conf")
+shwaastgbot = xetrapal.telegramastras.XetrapalTelegramBot(config=memberbotconfig, logger=xpal.shwaastgbotxpal.logger)
+logger = shwaastgbot.logger
 GETMOBILE, PROCESS_MESSAGE = range(2)
 
 send_contact_text = u'\U0001F4CD Send Contact'
@@ -140,7 +140,7 @@ states={
 
 def setup():
     # Create the Updater and pass it your bot's token.
-    updater = saibot.updater
+    updater = shwaastgbot.updater
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
     # Add conversation handler with the states CHOOSING, TYPING_CHOICE and TYPING_REPLY
@@ -161,13 +161,13 @@ def setup():
 
 
 def single_update():
-    p = saibot.get_latest_updates()
+    p = shwaastgbot.get_latest_updates()
     for update in p:
-        saibot.updater.dispatcher.process_update(update)
+        shwaastgbot.updater.dispatcher.process_update(update)
     return p
 
 
 if __name__ == '__main__':
     setup()
-    saibot.updater.start_polling()
-    saibot.updater.idle()
+    shwaastgbot.updater.start_polling()
+    shwaastgbot.updater.idle()
