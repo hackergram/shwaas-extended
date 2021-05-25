@@ -6,9 +6,6 @@
         "urlbase": "http://192.168.56.101/xetrapal"
     },
     "Pygsheets": {
-        "avdrive": "/opt/shwaasbot-appdata/xetrapal-auth/abndrive.json"
-    },
-    "Twitter": {
-        "twython": "/opt/shwaasbot-appdata/xetrapal-auth/twython.json"
+        "avdrive": "/opt/shwaasbot-appdata/xetrapal-auth/shwaasbotdrive.json"
     }
 }
