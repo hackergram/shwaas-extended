@@ -4,3 +4,5 @@ This is a repository of tools and software components to support volunteer indiv
 
 For feedback/queries/collaborations please write to listener-at-hackergram.org
 
+## For collaborators
+Please fork, make your changes and issue a pull request - please ask if unsure how!
