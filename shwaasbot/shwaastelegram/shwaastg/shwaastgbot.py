@@ -83,7 +83,7 @@ def loop(update: Update, context: CallbackContext):
         return exit(update,context)
     #text = os.popen("fortune").read()
     logger.info("{} {}".format(context.user_data['member'].username,update.message.text))
-    text=get_rasa_response(username=context.user_data['member'].username, message_text=update.message.text,hostname="http://localhost")
+    text=get_rasa_response(username=context.user_data['member'].username, message_text=update.message.text,hostname="http://192.168.56.1")
 
     logger.info(str(text[0]))
     update.message.reply_text(text[0]['text'], parse_mode=ParseMode.HTML, reply_markup=ReplyKeyboardRemove())
