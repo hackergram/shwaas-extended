@@ -17,10 +17,11 @@ from xetrapal import telegramastras
 import os
 
 #import sys
+
 #sys.path.append("/opt/xetrapal")
 
 
-memberbotconfig = xetrapal.karma.load_config(configfile="/opt/shwaastgbot-appdata/shwaastgbot.conf")
+memberbotconfig = xetrapal.karma.load_config(configfile="/opt/shwaasbot-appdata/shwaastgbot.conf")
 shwaastgbot = xetrapal.telegramastras.XetrapalTelegramBot(config=memberbotconfig, logger=xpal.shwaastgbotxpal.logger)
 logger = shwaastgbot.logger
 GETMOBILE, PROCESS_MESSAGE = range(2)
@@ -37,7 +38,7 @@ exit_text = u'\U0001F44B Bye'
 #                        ]
 
 main_menu_header_text = '''\
-    Hi! I was waiting for you.\n
+    Hi! My name is ShwaasBot.\n
 '''
 
 def facts_to_str(user_data):
@@ -62,14 +63,14 @@ def main_menu(update: Update, context: CallbackContext):
     logger.info(context.user_data)
     user_data = context.user_data
     try:
-        user_data['member'] = xpal.get_member_by_tgid(update.message.from_user.id)
+        #user_data['member'] = xpal.get_member_by_tgid(update.message.from_user.id)
+        user_data['member'] = xpal.get_member_by_username(update.message.from_user.username)
         logger.info(u"{}".format(user_data))
         if user_data['member'] is None:
-            update.message.reply_text("https://www.youtube.com/watch?v=pOy5mF-xoTA")
+            update.message.reply_text("Sorry, this service is for whitelisted members only. \nYou can find some useful videos at http://hackergram.org/ramal/covidlocalvids.html\nThere is also a list of reading material at https://hackergram.org/ramal/covidlocaldocs.html")
             #return ConversationHandler.END
             return GETMOBILE
         logger.info("Main Menu presented to member {}".format(user_data['member'].username))
-        update.message.reply_photo(photo=open("/var/www/html/sex/lips.jpg", "rb"), reply_markup=ReplyKeyboardRemove())
         update.message.reply_text(main_menu_header_text,  parse_mode=ParseMode.HTML, reply_markup=ReplyKeyboardRemove())
         return PROCESS_MESSAGE
     except Exception as e:
@@ -97,7 +98,6 @@ def set_mobile(update: Update, context: CallbackContext):
         user_data['member'] = member
         logger.info("Main Menu presented to member {}".format(user_data['member'].username))
         markup = ReplyKeyboardMarkup(member_base_keyboard, one_time_keyboard=True)
-        update.message.reply_animation(animation=open("/var/www/html/sex/lips.gif","rb"))
         update.message.reply_text(main_menu_header_text, reply_markup=markup, parse_mode=ParseMode.HTML)
         return PROCESS_MESSAGE
     else:
