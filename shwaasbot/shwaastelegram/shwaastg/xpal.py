@@ -19,7 +19,7 @@ import requests
 from xetrapal import gdastras
 from xetrapal import smsastras
 a = xetrapal.karma.load_xpal_smriti(
-    "/opt/shwaastgbot-appdata/shwaastgbotxpal.json")
+    "/opt/shwaasbot-appdata/shwaasbotxpal.json")
 a.save()
 a.reload()
 shwaastgbotxpal = xetrapal.Xetrapal(a)
