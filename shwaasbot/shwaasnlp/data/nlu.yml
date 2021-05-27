@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hello
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +30,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +38,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +47,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +63,8 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
+    - Testing replies
+    - All well
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,10 +81,34 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: express_approval
+  examples: |
+    - Nice!
+- intent: express_concern
+  examples: |
+    - I'm okay, what about you?
+- intent: hi_request_language_change
+  examples: |
+    - प्लीज हिंदी में बतायें
+- intent: hi_non_understanding
+  examples: |
+    - अरे म्ज्झे अन्ग्रेजी नाही आती
+    - समझा नहिं
+- intent: hi_question_covid_generic
+  examples: |
+    - करोना के विषय मेँ  कुछ बता सकते हो?
+- intent: hi_question_known_languages
+  examples: |
+    - हिंदी चलेगी?
+- intent: hi_positive_sentiment
+  examples: |
+    - कोइ बात नहीं धीरे धीरे सीख जाओगे
+- intent: hi_greeting
+  examples: |
+    - नमस्ते
