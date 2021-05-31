@@ -38,6 +38,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - 🖖
+    - 👍👍
 - intent: deny
   examples: |
     - no
@@ -87,6 +89,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Kya hua
 - intent: express_approval
   examples: |
     - Nice!
@@ -103,12 +106,21 @@ nlu:
 - intent: hi_question_covid_generic
   examples: |
     - करोना के विषय मेँ  कुछ बता सकते हो?
+    - करोना का क्या?
+    - कोरोना से डर लगता है
 - intent: hi_question_known_languages
   examples: |
     - हिंदी चलेगी?
 - intent: hi_positive_sentiment
   examples: |
     - कोइ बात नहीं धीरे धीरे सीख जाओगे
+    - अरे ये क्या बात हुई
+    - कोई बात नही
 - intent: hi_greeting
   examples: |
     - नमस्ते
+    - नमस्ताए
+    - Namaste
+- intent: emoji_namaste
+  examples: |
+    - 🙏🙏
