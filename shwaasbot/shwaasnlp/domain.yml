@@ -35,7 +35,23 @@ intents:
     use_entities: true
 - hi_greeting:
     use_entities: true
-entities: []
+- emoji_namaste:
+    use_entities: true
+- hi_bot_challenge:
+    use_entities: true
+- rn_info:
+    use_entities: true
+- question:
+    use_entities: true
+- rn_request:
+    use_entities: true
+- request:
+    use_entities: true
+- info:
+    use_entities: true
+entities:
+- name
+- mobile_num
 slots: {}
 responses:
   utter_greet:

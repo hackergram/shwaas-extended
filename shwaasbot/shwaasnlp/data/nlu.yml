@@ -30,6 +30,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - is bar bhi maine dekha ek baar galat vikalp bola aur doosri baar mein bheja
 - intent: affirm
   examples: |
     - yes
@@ -67,6 +68,7 @@ nlu:
     - so perfect
     - Testing replies
     - All well
+    - Good
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -96,6 +98,7 @@ nlu:
 - intent: express_concern
   examples: |
     - I'm okay, what about you?
+    - How are you
 - intent: hi_request_language_change
   examples: |
     - प्लीज हिंदी में बतायें
@@ -118,6 +121,7 @@ nlu:
     - कोइ बात नहीं धीरे धीरे सीख जाओगे
     - अरे ये क्या बात हुई
     - कोई बात नही
+    - थोडा बातूनी है
 - intent: hi_greeting
   examples: |
     - नमस्ते
@@ -129,3 +133,51 @@ nlu:
 - intent: hi_bot_challenge
   examples: |
     - क्या हुआ?
+- intent: info
+  examples: |
+    - [Vinay](name)[Vinay](name)[Vinay](name) reports that he had not been able to record the first time he tried. However this recording at second attempt seems to have worked
+    - Nahi to bahut zyada notification generate karega
+    - I'm not sure listening mode is very useful here ' we can also change option 2 to the app selection option
+    - Also need to decide what message should play if user chooses to listen
+    - But option 2 was difficult to select
+    - Recording was okay
+    - i am talking to another coder tonight to see if we can go faster on logging and feature adds
+    - ok, i think setting change may have helped...but let me log the calls in any case so that we have scientific observations :)
+    - Okay, one more bug - if the script uploads the file during the recording, it just gets a blank file
+    - Before launch
+    - So these are few things to test
+    - We have not put anything there...we should have a list
+    - Before sharing with community
+    - *few
+    - I think with colleagues is fine as long as they will be able to give us feedback...we can also collect from backend
+    - I would be keen  to test bit more first
+    - I.e. how many out of 10 attempts succeed
+    - And see what's the failure rate
+    - So we should do few more tests
+    - Ok, I have not changed anything
+    - so that we are at least aware
+    - i will also start logging the calls where recording did not come, for the time being
+    - i am seeing some errors on the list
+    - @Vinnuji99 looks like there are still issues with the recording from ganiyari
+    - mere recordings mein bhi i had to press 1 twice
+- intent: request
+  examples: |
+    - [8171211838](mobile_num)[8171211838](mobile_num)[8171211838](mobile_num) please record some test calls on this number and confirm that they are
+    - @[vinay](name) can you figure out what the issue is?
+    - But would be good to get fee user feedback
+    - please file an issue
+- intent: rn_request
+  examples: |
+    - jab bhi kisi ko bhi group me se samay mile, ek test call record kar dein - mai logs ka analysis ke liye bhi ek system laga deta hun jisse hamein ye pata chalta rahe ki kitni call fail hui aur kitni success
+    - ab try kar ke dekhein
+    - uska bhi issue file karna hai
+- intent: rn_info
+  examples: |
+    - ok, i will make some fixes and update - fir ek round testing aur karna hoga
+    - Ye maine re-send kiya hai
+    - settibg change kiya hai
+    - ek aur problem tum document be bataye the
+    - aaj raat ko try karte hain
+- intent: question
+  examples: |
+    - Vinay, what's your availability to test?
