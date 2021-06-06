@@ -2,7 +2,15 @@
 
 ### Install Asterisk
 
+```
+
+sudo apt install asterisk
+
+```
+
 ### Install MojoBol
+
+
 
 ### Install the Shwaas call flow
 
