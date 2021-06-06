@@ -1,0 +1,36 @@
+---
+- id: 1487766199555
+  name: Play
+  type: play
+  root: true
+  next: 1487766331807
+  resource:
+    guid: ee2538ba-9291-29a3-40c8-924ce96a5d86
+
+
+- id: 1487766331807
+  name: Record
+  type: record
+  root: false
+  next: 1487766986007
+  timeout: '180'
+  stop_key: '1'
+  explanation_resource:
+    guid: 489a1ea5-93d4-3657-3130-147b5ccb73bb
+  confirmation_resource:
+    guid: 442b4217-b83f-0e47-966a-5853eb0d3c90
+- id: 1487766339758
+  name: Play
+  type: play
+  root: false
+  next: 1487766986007
+  resource:
+    guid: 35948996-7295-b5f6-adde-45961e8bcd58
+
+
+
+- id: 1487766986007
+  name: Hang Up
+  type: hang_up
+  root: false
+  next:
