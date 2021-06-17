@@ -41,6 +41,8 @@ nlu:
     - correct
     - 🖖
     - 👍👍
+    - Ok
+    - yes i think we can share and start getting the recordings
 - intent: deny
   examples: |
     - no
@@ -69,6 +71,7 @@ nlu:
     - Testing replies
     - All well
     - Good
+    - I am good
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -102,6 +105,7 @@ nlu:
 - intent: hi_request_language_change
   examples: |
     - प्लीज हिंदी में बतायें
+    - Please talk to me in English
 - intent: hi_non_understanding
   examples: |
     - अरे म्ज्झे अन्ग्रेजी नाही आती
@@ -127,6 +131,7 @@ nlu:
     - नमस्ते
     - नमस्ताए
     - Namaste
+    - सभी को नमश्कार
 - intent: emoji_namaste
   examples: |
     - 🙏🙏
@@ -134,38 +139,84 @@ nlu:
   examples: |
     - क्या हुआ?
 - intent: info
-  examples: |
-    - [Vinay](name)[Vinay](name)[Vinay](name) reports that he had not been able to record the first time he tried. However this recording at second attempt seems to have worked
-    - Nahi to bahut zyada notification generate karega
-    - I'm not sure listening mode is very useful here ' we can also change option 2 to the app selection option
-    - Also need to decide what message should play if user chooses to listen
-    - But option 2 was difficult to select
-    - Recording was okay
-    - i am talking to another coder tonight to see if we can go faster on logging and feature adds
-    - ok, i think setting change may have helped...but let me log the calls in any case so that we have scientific observations :)
-    - Okay, one more bug - if the script uploads the file during the recording, it just gets a blank file
-    - Before launch
-    - So these are few things to test
-    - We have not put anything there...we should have a list
-    - Before sharing with community
-    - *few
-    - I think with colleagues is fine as long as they will be able to give us feedback...we can also collect from backend
-    - I would be keen  to test bit more first
-    - I.e. how many out of 10 attempts succeed
-    - And see what's the failure rate
-    - So we should do few more tests
-    - Ok, I have not changed anything
-    - so that we are at least aware
-    - i will also start logging the calls where recording did not come, for the time being
-    - i am seeing some errors on the list
-    - @Vinnuji99 looks like there are still issues with the recording from ganiyari
-    - mere recordings mein bhi i had to press 1 twice
+  examples:
+  - text: |
+      [Vinay](name)[Vinay](name)[Vinay](name) reports that he had not been able to record the first time he tried. However this recording at second attempt seems to have worked
+  - text: |
+      Nahi to bahut zyada notification generate karega
+  - text: |
+      I'm not sure listening mode is very useful here ' we can also change option 2 to the app selection option
+  - text: |
+      Also need to decide what message should play if user chooses to listen
+  - text: |
+      But option 2 was difficult to select
+  - text: |
+      Recording was okay
+  - text: |
+      i am talking to another coder tonight to see if we can go faster on logging and feature adds
+  - text: |
+      ok, i think setting change may have helped...but let me log the calls in any case so that we have scientific observations :)
+  - text: |
+      Okay, one more bug - if the script uploads the file during the recording, it just gets a blank file
+  - text: |
+      Before launch
+  - text: |
+      So these are few things to test
+  - text: |
+      We have not put anything there...we should have a list
+  - text: |
+      Before sharing with community
+  - text: |
+      *few
+  - text: |
+      I think with colleagues is fine as long as they will be able to give us feedback...we can also collect from backend
+  - text: |
+      I would be keen  to test bit more first
+  - text: |
+      I.e. how many out of 10 attempts succeed
+  - text: |
+      And see what's the failure rate
+  - text: |
+      So we should do few more tests
+  - text: |
+      Ok, I have not changed anything
+  - text: |
+      so that we are at least aware
+  - text: |
+      i will also start logging the calls where recording did not come, for the time being
+  - text: |
+      i am seeing some errors on the list
+  - text: |
+      @Vinnuji99 looks like there are still issues with the recording from ganiyari
+  - text: |
+      mere recordings mein bhi i had to press 1 twice
+  - text: |
+      Vinay reports that he had not been able to record the first time he tried. However this recording at second attempt seems to have worked
+  - text: |
+      https://www.youtube.com/watch?v=bOnLRE3PmGg
+  - text: |
+      I think Matrix mein DTMF setting ke saath thoda experiment karna padega
+  - text: |
+      bilkul - aap ise apni aawaaz mein record kar ke whatsapp par bhi bhej sakte hain aur isi number par bhi record kar sakte hain
+  - text: |
+      Agenda for tomorrow
+      http://hackergram.org/ramal/hgcovidcommunitysupport.html
+  - text: |
+      Hackergram Open House- Community Based COVID Support
+      Sunday, 6 June · 6:30 – 8:00pm
+      Google Meet joining info
+      Video call link: https://meet.google.com/bsm-cfbi-kms
+  - text: |
+      Will add a feature request to send a group updat eon each start message
 - intent: request
   examples: |
     - [8171211838](mobile_num)[8171211838](mobile_num)[8171211838](mobile_num) please record some test calls on this number and confirm that they are
     - @[vinay](name) can you figure out what the issue is?
     - But would be good to get fee user feedback
     - please file an issue
+    - 8171211838 please record some test calls on this number and confirm that they are
+    - and if we can have one single message with the basic protocol for playing in option 2
+    - Please try a test recording'
 - intent: rn_request
   examples: |
     - jab bhi kisi ko bhi group me se samay mile, ek test call record kar dein - mai logs ka analysis ke liye bhi ek system laga deta hun jisse hamein ye pata chalta rahe ki kitni call fail hui aur kitni success
@@ -181,3 +232,17 @@ nlu:
 - intent: question
   examples: |
     - Vinay, what's your availability to test?
+    - What is rasa
+    - are you there?
+    - ??
+- intent: request_language_change
+  examples: |
+    - लेकिन एक दिन मजेदार होगा
+- intent: hi_info
+  examples:
+  - text: |
+      यहां हमारा एक 
+      चैटबाट यानि श्वास बाट ट्रेन होते चल रहा है
+- intent: confirm_success
+  examples: |
+    - We were both able to record from here
