@@ -6,6 +6,11 @@ import time
 if __name__ == "__main__":
     while True:
         shwaastgbot.logger.info("Cycle")
+        activecalls = os.popen("asterisk -x 'core show channels verbose' | grep 'active calls'").read().strip()
+        if activecalls != "0 active calls":
+            shwaastgbot.logger.info("Skipping cycle since call in progress")
+            time.sleep(180)
+            continue
         try:
             call_list = os.listdir("/opt/voiceofhimalaya/calls")
             call_list.remove("calllog")
@@ -20,11 +25,11 @@ if __name__ == "__main__":
                         shwaastgbot.logger.info(
                             "Trying to upload {}".format(call))
                         shwaastgbot.updater.bot.send_audio(-456601244, open(
-                            os.path.join("/opt/voiceofhimalaya/calls", call, fn), "rb"), caption=call)
+                            os.path.join("/opt/voiceofhimalaya/calls", call, fn), "rb"), caption=call, timeout=300)
                         with open(os.path.join(os.path.join("/opt/voiceofhimalaya/calls", call, "telegramed")), "w") as f:
                             f.write("Telegramed")
                         shwaastgbot.logger.info(
                             "Successfully uploaded {}".format(call))
         except Exception as e:
             shwaastgbot.logger.error("{} {}".format(str(e), repr(e)))
-        time.sleep(600)
+        time.sleep(180)
